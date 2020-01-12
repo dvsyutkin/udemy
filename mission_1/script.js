@@ -1,7 +1,7 @@
 'use strict';
 
 const money = +prompt('Ваш бюджет на месяц?', ''),
-    time  = prompt('Введите дату в формате YYYY-MM-DD', ''),
+    time = prompt('Введите дату в формате YYYY-MM-DD', ''),
 
     appData = {
         budget: money,
@@ -12,30 +12,36 @@ const money = +prompt('Ваш бюджет на месяц?', ''),
         savings: false
     };
 
-    // const qustions = [
-    //     'Введите обязательную статью расходов в этом месяце',
-    //     'Во сколько обойдется?'
-    // ];
+// for (let i = 0; i < 2; i++) {
+//     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+//         b = prompt('Во сколько обойдется?', '');
 
-    // for (let i = 0; i < qustions.length; i++) {
-        
-    //     appData.expenses = qustions[i];
-    // }
+//     if ( (typeof(a)) === 'string' && a != null && (typeof(b)) === 'string' 
+//         && b != null && a.length < 50 && a != '' && b != '') {
+//         appData.expenses[a] = b;
+//     } else {
+//         i--;
+//     }
+// }
 
-    let quest1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        quest2 = prompt('Во сколько обойдется?', ''),
-        quest3 = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        quest4 = prompt('Во сколько обойдется?', '');
+// цикл do-while
+
+/*let i = 0;
+do {
+    let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+        b = prompt('Во сколько обойдется?', '');
+
+    if ((typeof (a)) === 'string' && a != null && (typeof (b)) === 'string' &&
+        b != null && a.length < 50 && a != '' && b != '') {
+        appData.expenses[a] = b;
+        i++;
+    }
+
+} while (i < 2);*/
 
 
-    appData.expenses[quest1] = quest2;
-    appData.expenses[quest3] = quest4;
 
-    alert('Бюджет на один день: ' + appData.budget/30 + ' руб.');
+console.log(appData.expenses);
 
 
-    console.log(appData);
-    
-    
-
-
+// alert('Бюджет на один день: ' + appData.budget/30 + ' руб.');
