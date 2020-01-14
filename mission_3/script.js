@@ -18,7 +18,7 @@ let appData = {
         expenses: {},
         optionalExpenses: {},
         income: [],
-        savings: true
+        savings: false
     };
 
 function chooseExpenses() {
@@ -36,21 +36,25 @@ function chooseExpenses() {
 }
 chooseExpenses();
 
-
-appData.moneyPerDay = (appData.budget / 30).toFixed();
-
-if (appData.moneyPerDay < 1000) {
-    console.log("Минимальный уровень достатка");
-} else if (appData.moneyPerDay > 1000 && appData.moneyPerDay < 2000){
-    console.log("Средний уровень достатка");
-} else if (appData.moneyPerDay > 2000){
-    console.log("Высокий уровень достатка");
-} else {
-    console.log("Произошла какая-то ошибка");
-    
+function detectDayBudget() {
+    appData.moneyPerDay = (appData.budget / 30).toFixed();
+    alert('Бюджет на один день: ' + appData.moneyPerDay + ' руб.');
 }
-alert('Бюджет на один день: ' + appData.moneyPerDay + ' руб.');
-console.log(appData);
+detectDayBudget();
+
+function detectLevel() {
+    if (appData.moneyPerDay < 1000) {
+        console.log("Минимальный уровень достатка");
+    } else if (appData.moneyPerDay > 1000 && appData.moneyPerDay < 2000){
+        console.log("Средний уровень достатка");
+    } else if (appData.moneyPerDay > 2000){
+        console.log("Высокий уровень достатка");
+    } else {
+        console.log("Произошла какая-то ошибка");
+    }
+}
+
+detectLevel();
 
 function checkSavings() {
     if (appData.savings == true) {
@@ -63,3 +67,17 @@ function checkSavings() {
 }
 
 checkSavings();
+
+// Определение не обязательных расходов
+function chooseOptExpenses() {
+    for (let i = 0; i < 3; i++) {
+        let q = prompt('Статья необязательных расходов?');
+        if (q !='' && q != null){
+            appData.optionalExpenses[i+1] = q;
+        } else {
+            i--;
+        }
+    }
+}
+
+// chooseOptExpenses();
