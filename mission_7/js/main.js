@@ -1,0 +1,22 @@
+'use strict';
+
+const   btnStart = document.getElementById('start'), //кнопка Начать расчет 
+
+        budgetValue = document.getElementsByClassName('budget-value')[0],
+        daybudgetValue = document.getElementsByClassName('daybudget-value')[0],
+        levelValue = document.getElementsByClassName('level-value')[0],
+        expensesValue = document.getElementsByClassName('expenses-value')[0],
+        optionalexpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
+        incomeValue = document.getElementsByClassName('income-value')[0],
+        monthsavingsValue = document.getElementsByClassName('monthsavings-value')[0],
+        yearsavingsValue = document.getElementsByClassName('yearsavings-value')[0],
+
+        expensesItem = document.getElementsByClassName('expenses-item'),
+        expensesBtn = document.getElementsByTagName('button')[0],
+        optionalexpensesBtn = document.getElementsByTagName('button')[1],
+        budgetBtn = document.getElementsByTagName('button')[2],
+        optionalexpensesItem = document.querySelectorAll('.optionalexpenses-item');
+
+
+
+console.log(optionalexpensesItem);
