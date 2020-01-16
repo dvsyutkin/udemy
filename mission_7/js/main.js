@@ -3,7 +3,7 @@
 const   btnStart = document.getElementById('start'), //кнопка Начать расчет 
 
         budgetValue = document.getElementsByClassName('budget-value')[0],
-        daybudgetValue = document.getElementsByClassName('daybudget-value')[0],
+        dayBudgetValue = document.getElementsByClassName('daybudget-value')[0],
         levelValue = document.getElementsByClassName('level-value')[0],
         expensesValue = document.getElementsByClassName('expenses-value')[0],
         optionalexpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
@@ -15,8 +15,14 @@ const   btnStart = document.getElementById('start'), //кнопка Начать
         expensesBtn = document.getElementsByTagName('button')[0],
         optionalexpensesBtn = document.getElementsByTagName('button')[1],
         budgetBtn = document.getElementsByTagName('button')[2],
-        optionalexpensesItem = document.querySelectorAll('.optionalexpenses-item');
+        optionalexpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+        chooseIncome = document.querySelector('#income'),
+        savings = document.querySelector('#savings'),
+        chooseSum = document.querySelector('#sum'),
+        choosePercent = document.querySelector('#percent'),
 
+        yearValue = document.querySelector('.year-value'),
+        monthValue = document.querySelector('.month-value'),
+        dayValue = document.querySelector('.day-value');
 
-
-console.log(optionalexpensesItem);
+console.log(budgetValue);
