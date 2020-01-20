@@ -733,3 +733,16 @@ header ul li:before {
 .overlay .popup-form__btn:hover {
   box-shadow: 0 0 10px #c78030;
 }
+.btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px;
+  border: none;
+  background: rgb(114, 110, 110);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
