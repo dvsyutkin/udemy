@@ -190,6 +190,22 @@ header ul li:before {
   -webkit-transition: 0.4s;
           transition: 0.4s;
 }
+
+.current {
+  position: relative;
+  transition: 0.5s;
+}
+.current:before {
+  position: absolute;
+  bottom: 11px;
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #c78030;
+  margin-top: 4px;
+}
+
 .content .info-header-tab:hover:after {
   width: 60%;
 }
