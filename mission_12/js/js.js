@@ -139,10 +139,12 @@ window.addEventListener('DOMContentLoaded', function () {
     let descriptionBtn = document.querySelectorAll('.description-btn');
 
     descriptionBtn.forEach(element => {
-        element.addEventListener('click', () => {
+        element.addEventListener('click', function() {
             overlay.style.display = 'block';
             this.classList.add('more-splash');
             document.body.style.overflow = 'hidden';
+            console.log(this);
+            
         });
     });
     
